@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import RoomJoinPage from "./RoomJoinPage";
-import CreateRoomPage from "./CreateRoomPage";
-import LoginPage from "./LoginPage";
+import RoomJoinPage from "./Pages/RoomJoinPage";
+import CreateRoomPage from "./Pages/CreateRoomPage";
+import LoginPage from "./Pages/LoginPage";
 import {
     BrowserRouter as Router,
     Switch,
