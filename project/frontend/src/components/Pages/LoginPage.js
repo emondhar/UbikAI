@@ -4,7 +4,9 @@ import Typography from "@material-ui/core/Typography";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import FormControl from "@material-ui/core/FormControl";
 import { Link } from "react-router-dom";
-import { Button } from "../button.jsx";
+import { SimpleButton } from "../SimpleButton.jsx";
+import { UbikLogo } from "../UbikLogo.jsx";
+import { SimpleTextField } from "../SimpleTextField.jsx";
 
 
 export default class LoginPage extends Component {
@@ -13,27 +15,20 @@ export default class LoginPage extends Component {
     constructor(props) {
         super(props);
     }
+
+
     render() {
         return (
             <Grid container spacing={1}>
                 <Grid item xs={12} align="center">
-                    <Typography component="h4" variant="h4" color="primary">
-                        Login
-                    </Typography>
+                    <UbikLogo></UbikLogo>
+                </Grid>
+                <Grid item xs={3} align="center">
+                    <SimpleTextField></SimpleTextField>
                 </Grid>
                 <Grid item xs={12} align="center">
-                    <FormControl component="fieldset">
-                        <FormHelperText>
-                            <div align="center" color="primary">Guest Control of Playback State</div>
-                        </FormHelperText>
-
-                    </FormControl>
+                    <SimpleButton buttonColor="white" buttonTextColor="black" frontSize={30} url="http://127.0.0.1:8000/create">Login</SimpleButton>
                 </Grid>
-
-                <Grid item xs={12} align="center">
-                    <Button>Login</Button>
-                </Grid>
-
             </Grid>
         );
     }
